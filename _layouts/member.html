@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<div class="member-head">
+  <div class="header-badge">
+    <a href="{{ page.url }}">
+      <img src="{{ page.icon }}" />
+    </a>
+  </div>
+</div>
+<div class="member card">
+  {% if page.nickname %}<p class="nickname">{{ page.nickname }}</p>{% endif %}
+  {% if page.email %}<a href="mailto:{{page.email}}"><i class="fa fa-envelope fa-3x" aria-hidden="true"></i></a>{% endif %}
+  {% if page.github %}<a href="https://github.com/{{page.github}}"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a>{% endif %}
+  {% if page.description %}<p class="description">{{ page.description }}</p>{% endif %}
+</div>
+<div class="posts card">
+    <div class="card-content white-text">
+    {{ content }}
+    </div>
+</div>
